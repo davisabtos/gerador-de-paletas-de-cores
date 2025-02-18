@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Paletas de Cores</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Gerador de Paletas de Cores</h1>
+    </header>
+    <main>
+        <div class="container">
+            <label for="color">Escolha uma cor:</label>
+            <input type="color" id="color" value="#ffffff">
+            
+            <br>
+
+            <label for="scheme">Escolha um esquema de cores:</label>
+            <select id="scheme">
+                <option value="Monocromatico">Monocromático</option>
+                <option value="Analogo">Análogo</option>
+                <option value="Complementar">Complementar</option>
+                <option value="Neutro">Neutro</option>
+            </select>
+
+            <br>
+
+            <button id="generate" onclick="chooseColor()">Gerar Paleta</button>
+
+            <!-- Mostra a paleta escolhida -->
+            <div id="palleta">
+                <div id="colorPallete-1" onclick="copyColor('colorPallete-1')"></div>
+                <div id="colorPallete-2" onclick="copyColor('colorPallete-2')"></div>
+                <div id="colorPallete-3" onclick="copyColor('colorPallete-3')"></div>
+                <div id="colorPallete-4" onclick="copyColor('colorPallete-4')"></div>
+                <div id="colorPallete-5" onclick="copyColor('colorPallete-5')"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Gerador de Paletas de Cores. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
